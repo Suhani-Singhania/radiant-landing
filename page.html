@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radiant Landing Page</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f6d365, #fda085, #84fab0, #8fd3f4);
+      background-size: 400% 400%;
+      animation: gradientShift 18s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .hero-card h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .hero-card p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #333;
+      transform: translateY(-2px);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .hero-card h1 {
+        font-size: 2rem;
+      }
+
+      .hero-card p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-card">
+    <h1>Welcome to Radiant</h1>
+    <p>ONE PAGE FOR ALL</p>
+    <a href="#start" class="btn">Get Started</a>
+  </div>
+</body>
+</html>
